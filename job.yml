@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-sample
+  labels:
+    app: job-sample
+spec:
+  template:
+    metadata:
+      name: job-sample-pod
+    spec:
+      containers:
+      - name: job-sample
+        image: slamidtfyn/job-sample
+      restartPolicy: Never
